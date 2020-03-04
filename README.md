@@ -1,6 +1,8 @@
 # Composed-News
 
-This app will try to imitate look and feel of [Google News](https://play.google.com/store/apps/details?id=com.google.android.apps.magazines&hl=en)
+Composed news heavily draws inspiration from [Google News](https://play.google.com/store/apps/details?id=com.google.android.apps.magazines&hl=en).
+App is meant to be used purely as educational.
+
 
 #### Libraries
 
