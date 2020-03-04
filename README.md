@@ -16,5 +16,7 @@ App is meant to be used purely as educational.
 
 [Dagger2](https://github.com/google/dagger)
 
+[Glide](https://github.com/bumptech/glide)
+
 #### Architecture
 MVVM Model-View-ViewModel
