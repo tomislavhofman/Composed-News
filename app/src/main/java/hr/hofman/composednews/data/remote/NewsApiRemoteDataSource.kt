@@ -5,7 +5,7 @@ import hr.hofman.composednews.data.ComposedNewsRemoteDataSource
 import hr.hofman.composednews.data.local.Article
 import hr.hofman.composednews.data.mappers.NewsApiArticleToArticle
 import hr.hofman.composednews.data.network.NewsApiService
-import io.reactivex.rxjava3.core.Single
+import io.reactivex.Single
 import javax.inject.Inject
 import javax.inject.Provider
 

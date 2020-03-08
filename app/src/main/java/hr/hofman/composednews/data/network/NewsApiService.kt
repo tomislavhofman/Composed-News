@@ -1,9 +1,8 @@
 package hr.hofman.composednews.data.network
 
 import hr.hofman.composednews.data.remote.NewsApiResponse
-import io.reactivex.rxjava3.core.Single
+import io.reactivex.Single
 import retrofit2.http.GET
-import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface NewsApiService {
