@@ -1,8 +1,8 @@
 package hr.hofman.composednews.data
 
 import hr.hofman.composednews.data.local.Article
-import io.reactivex.rxjava3.core.Flowable
-import io.reactivex.rxjava3.core.Single
+import io.reactivex.Flowable
+import io.reactivex.Single
 
 interface ComposedNewsLocalDataSource {
     fun getHeadlines(countryCode: String): Flowable<List<Article>>

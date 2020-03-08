@@ -43,8 +43,8 @@ dependencies {
     implementation "androidx.navigation:navigation-fragment-ktx:2.2.1"
     implementation "androidx.navigation:navigation-ui-ktx:2.2.1"
 
-    implementation "io.reactivex.rxjava3:rxjava:3.0.0"
-    implementation "com.github.akarnokd:rxjava3-retrofit-adapter:3.0.0-RC8"
+    implementation "io.reactivex.rxjava2:rxjava:2.2.18"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:2.7.2"
 
     implementation "com.google.dagger:dagger:2.26"
     kapt "com.google.dagger:dagger-compiler:2.26"
@@ -60,6 +60,13 @@ dependencies {
     testImplementation "com.squareup.okhttp3:mockwebserver:4.4.0"
 
     implementation "com.jakewharton.threetenabp:threetenabp:1.2.2"
+
+    // Room
+    implementation "androidx.room:room-common:2.2.4"
+    implementation "androidx.room:room-runtime:2.2.4"
+    implementation "androidx.room:room-rxjava2:2.2.4"
+    kapt "androidx.room:room-compiler:2.2.4"
+    testImplementation "androidx.room:room-testing:2.2.4"
 
     testImplementation 'junit:junit:4.13'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'

@@ -6,7 +6,6 @@ import dagger.Module
 import dagger.Provides
 import hr.hofman.composednews.BuildConfig
 import hr.hofman.composednews.data.network.NewsApiService
-import hu.akarnokd.rxjava3.retrofit.RxJava3CallAdapterFactory
 import okhttp3.Interceptor
 import okhttp3.Interceptor.Chain
 import okhttp3.OkHttpClient
@@ -14,6 +13,7 @@ import okhttp3.Response
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Converter
 import retrofit2.Retrofit
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.moshi.MoshiConverterFactory
 import javax.inject.Named
 import javax.inject.Singleton
@@ -65,7 +65,7 @@ object RetrofitModule {
         .baseUrl(BASE_URL)
         .callFactory(okHttpClient)
         .addConverterFactory(converterFactory)
-        .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
+        .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
         .build()
         .create(NewsApiService::class.java)
 }
