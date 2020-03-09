@@ -7,12 +7,11 @@ import dagger.Module
 import dagger.Provides
 import hr.hofman.composednews.data.network.NewsApiService
 import hr.hofman.composednews.data.remote.NewsApiServiceTest
-import hu.akarnokd.rxjava3.retrofit.RxJava3CallAdapterFactory
 import okhttp3.OkHttpClient
-import okhttp3.logging.HttpLoggingInterceptor
 import okhttp3.mockwebserver.MockWebServer
 import retrofit2.Converter
 import retrofit2.Retrofit
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.moshi.MoshiConverterFactory
 import javax.inject.Singleton
 
@@ -58,7 +57,7 @@ object TestDataSourceModule {
         .baseUrl(mockWebServer.url("/"))
         .callFactory(okHttpClient)
         .addConverterFactory(converterFactory)
-        .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
+        .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
         .build()
         .create(NewsApiService::class.java)
 }
