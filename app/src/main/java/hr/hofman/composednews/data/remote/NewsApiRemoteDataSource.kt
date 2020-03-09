@@ -2,7 +2,7 @@ package hr.hofman.composednews.data.remote
 
 import hr.hofman.composednews.AppSchedulers
 import hr.hofman.composednews.data.ComposedNewsRemoteDataSource
-import hr.hofman.composednews.data.local.Article
+import hr.hofman.composednews.data.local.Headline
 import hr.hofman.composednews.data.mappers.NewsApiArticleToArticle
 import hr.hofman.composednews.data.network.NewsApiService
 import io.reactivex.Single
@@ -14,7 +14,7 @@ class NewsApiRemoteDataSource @Inject constructor(
     private val newsApiMapper: NewsApiArticleToArticle
 ) : ComposedNewsRemoteDataSource {
 
-    override fun getHeadlines(countryCode: String): Single<List<Article>> {
+    override fun getHeadlines(countryCode: String): Single<List<Headline>> {
         return service.get().getTopHeadlines().subscribeOn(AppSchedulers.network)
             .map { response ->
                 response.articles
