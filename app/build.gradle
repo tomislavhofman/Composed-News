@@ -25,6 +25,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    buildFeatures {
+        // Enables Jetpack Compose for this module
+        compose true
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -67,6 +73,11 @@ dependencies {
     implementation "androidx.room:room-rxjava2:2.2.4"
     kapt "androidx.room:room-compiler:2.2.4"
     testImplementation "androidx.room:room-testing:2.2.4"
+
+    // Compose
+    implementation "androidx.ui:ui-tooling:0.1.0-dev06"
+    implementation "androidx.ui:ui-layout:0.1.0-dev06"
+    implementation "androidx.ui:ui-material:0.1.0-dev06"
 
     testImplementation 'junit:junit:4.13'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
