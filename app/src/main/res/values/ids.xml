@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <id name="navigation_home" />
+    <id name="navigation_headlines" />
+    <id name="navigation_saved" />
+</resources>
