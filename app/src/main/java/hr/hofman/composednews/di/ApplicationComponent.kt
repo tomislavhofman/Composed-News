@@ -1,22 +1,28 @@
 package hr.hofman.composednews.di
 
-import android.content.Context
 import dagger.BindsInstance
 import dagger.Component
+import dagger.android.AndroidInjector
+import dagger.android.support.AndroidSupportInjectionModule
+import hr.hofman.composednews.ComposedNews
+import hr.hofman.composednews.data.DataModule
 import javax.inject.Singleton
 
 @Singleton
 @Component(
     modules = [
-        AppModule::class,
-        RetrofitModule::class]
+        AndroidSupportInjectionModule::class,
+        ApplicationModule::class,
+        HomeBuilder::class,
+        RetrofitModule::class,
+        ThreadingModule::class,
+        DatabaseModule::class,
+        DataModule::class]
 )
-interface ApplicationComponent {
+interface ApplicationComponent : AndroidInjector<ComposedNews> {
 
-    @Component.Builder
-    interface Builder {
-        @BindsInstance
-        fun applicationContext(applicationContext: Context): Builder
-        fun build(): ApplicationComponent
+    @Component.Factory
+    interface Factory {
+        fun create(@BindsInstance application: ComposedNews): ApplicationComponent
     }
 }
