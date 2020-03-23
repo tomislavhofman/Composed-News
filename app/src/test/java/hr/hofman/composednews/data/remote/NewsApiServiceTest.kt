@@ -2,7 +2,6 @@ package hr.hofman.composednews.data.remote
 
 import com.squareup.moshi.Moshi
 import hr.hofman.composednews.DaggerTestComponent
-import hr.hofman.composednews.data.network.NewsApiService
 import junit.framework.TestCase
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer

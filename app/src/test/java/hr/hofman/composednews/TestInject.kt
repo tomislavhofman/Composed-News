@@ -5,7 +5,7 @@ import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import dagger.Component
 import dagger.Module
 import dagger.Provides
-import hr.hofman.composednews.data.network.NewsApiService
+import hr.hofman.composednews.data.remote.NewsApiService
 import hr.hofman.composednews.data.remote.NewsApiServiceTest
 import okhttp3.OkHttpClient
 import okhttp3.mockwebserver.MockWebServer

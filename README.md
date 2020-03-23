@@ -6,7 +6,9 @@ App is meant to be used purely as educational.
 
 #### Libraries
 
-[Jetpack Compose](https://developer.android.com/jetpack/compose)
+[MvRx](https://github.com/airbnb/MvRx)
+
+[Epoxy](https://github.com/airbnb/epoxy)
 
 [Room Persistence Library](https://developer.android.com/topic/libraries/architecture/room)
 
@@ -19,4 +21,4 @@ App is meant to be used purely as educational.
 [Glide](https://github.com/bumptech/glide)
 
 #### Architecture
-MVVM Model-View-ViewModel
+MVVM

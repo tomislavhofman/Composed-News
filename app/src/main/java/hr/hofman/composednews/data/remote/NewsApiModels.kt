@@ -6,11 +6,11 @@ import com.squareup.moshi.JsonClass
 data class NewsApiResponse(
     val status: String,
     val totalResults: Int,
-    val articles: List<NewsApiArticle>
+    val articles: List<NewsApiHeadline>
 )
 
 @JsonClass(generateAdapter = true)
-data class NewsApiArticle(
+data class NewsApiHeadline(
     val source: NewsApiSource,
     val author: String?,
     val title: String?,
