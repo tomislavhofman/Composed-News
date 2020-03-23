@@ -1,4 +1,4 @@
-package hr.hofman.composednews.data.local
+package hr.hofman.composednews.data.local.entity
 
 import androidx.room.ColumnInfo
 import androidx.room.Embedded
@@ -14,9 +14,9 @@ import org.threeten.bp.Instant
         Index(value = ["title"], unique = true)
     ]
 )
-data class Headline(
+data class HeadlineEntity(
     @PrimaryKey(autoGenerate = true) @ColumnInfo(name = "id") override val id: Long = 0,
-    @Embedded val source: Source? = null,
+    @Embedded(prefix = "source_") val source: SourceEntity? = null,
     @ColumnInfo(name = "author") val author: String? = null,
     @ColumnInfo(name = "title") val title: String? = null,
     @ColumnInfo(name = "description") val description: String? = null,
@@ -25,7 +25,11 @@ data class Headline(
     @ColumnInfo(name = "publishedAt") val publishedAt: Instant? = null
 ) : LocalEntity
 
-data class Source(
+data class SourceEntity(
     val id: String,
     val name: String
-)
+) {
+    companion object {
+        val EMPTY = SourceEntity("", "")
+    }
+}

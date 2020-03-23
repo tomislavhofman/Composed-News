@@ -1,4 +1,4 @@
-package hr.hofman.composednews.data.network
+package hr.hofman.composednews.data.remote
 
 import hr.hofman.composednews.data.remote.NewsApiResponse
 import io.reactivex.Single
