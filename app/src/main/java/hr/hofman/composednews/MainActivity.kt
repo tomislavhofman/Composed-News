@@ -2,7 +2,6 @@ package hr.hofman.composednews
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.observe
 import androidx.navigation.NavController
 import dagger.android.AndroidInjector
@@ -22,8 +21,8 @@ class MainActivity : AppCompatActivity(), HasAndroidInjector {
     override fun onCreate(savedInstanceState: Bundle?) {
         setTheme(R.style.ComposedNewsTheme_NoActionBar_Fullscreen)
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_home)
-
+        binding = ActivityHomeBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         if(savedInstanceState == null) {
             setupBottomNavigationBar()
         }
