@@ -1,4 +1,4 @@
-# Composed-News
+# Composed-News [Abandoned]
 
 [![Build Status](https://app.bitrise.io/app/cdb3e3824de23b66/status.svg?token=47qoc4eB8gnB8phOBPxoew&branch=master)](https://app.bitrise.io/app/cdb3e3824de23b66)
 
